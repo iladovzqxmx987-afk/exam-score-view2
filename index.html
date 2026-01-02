@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <script>
-(function () {
-  const PASSWORD = "525361Sy"; // ← 你自己改成想要的密码
-
-  const input = prompt("请输入访问密码：");
-  if (input !== PASSWORD) {
-    document.documentElement.innerHTML = "";
-    document.body.style.background = "#fff";
-  }
-})();
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>中央机关及其直属机构公务员考试成绩查询</title>
@@ -221,4 +209,100 @@ body {
 </div>
 
 </body>
+<!-- 国考风格登录遮罩 -->
+<div id="login-mask" style="
+  position: fixed;
+  inset: 0;
+  background: #f2f2f2;
+  z-index: 9999;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+">
+
+  <div style="
+    width: 360px;
+    margin: 120px auto 0;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+  ">
+
+    <!-- 标题栏 -->
+    <div style="
+      background: #e9e9e9;
+      border-bottom: 1px solid #c9c9c9;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    ">
+      国家公务员考试成绩查询系统
+    </div>
+
+    <!-- 表单区 -->
+    <div style="padding: 18px 20px; font-size: 13px;">
+
+      <div style="margin-bottom: 12px; display: flex; align-items: center;">
+        <div style="width: 70px; text-align: right; margin-right: 8px;">
+          登录账号：
+        </div>
+        <input id="user" style="
+          flex: 1;
+          height: 26px;
+          border: 1px solid #999;
+          padding: 2px 6px;
+          font-size: 13px;
+        ">
+      </div>
+
+      <div style="margin-bottom: 16px; display: flex; align-items: center;">
+        <div style="width: 70px; text-align: right; margin-right: 8px;">
+          登录密码：
+        </div>
+        <input id="pass" type="password" style="
+          flex: 1;
+          height: 26px;
+          border: 1px solid #999;
+          padding: 2px 6px;
+          font-size: 13px;
+        ">
+      </div>
+
+      <!-- 按钮行（对齐关键） -->
+      <div style="
+        margin-left: 78px;
+      ">
+        <button onclick="checkLogin()" style="
+          width: 80px;
+          height: 28px;
+          background: #dbe8f5;
+          border: 1px solid #7a9cc6;
+          font-size: 13px;
+          cursor: pointer;
+        ">
+          登 录
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const VALID_USER = "331002200305230621";   // ← 改账号
+  const VALID_PASS = "525361Sy";  // ← 改密码
+
+  function checkLogin() {
+    const u = document.getElementById("user").value;
+    const p = document.getElementById("pass").value;
+
+    if (u === VALID_USER && p === VALID_PASS) {
+      document.getElementById("login-mask").style.display = "none";
+    } else {
+      alert("账号或密码错误，请重新输入。");
+    }
+  }
+</script>
+
+
 </html>
+
