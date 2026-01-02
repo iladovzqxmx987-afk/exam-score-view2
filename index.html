@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script>
+(function () {
+  const PASSWORD = "525361Sy"; // ← 你自己改成想要的密码
+
+  const input = prompt("请输入访问密码：");
+  if (input !== PASSWORD) {
+    document.documentElement.innerHTML = "";
+    document.body.style.background = "#fff";
+  }
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中央机关及其直属机构公务员考试成绩查询</title>
+
+<style>
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+               "Microsoft YaHei", Arial, sans-serif;
+  color: #333;
+}
+
+/* 顶部系统栏 */
+.topbar {
+  background: #b11c1c;
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 标题 */
+.banner {
+  background: #fbf3dc;
+  padding: 16px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.banner h1 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+.banner h2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* 主体布局 */
+.main {
+  display: flex;
+  gap: 10px;
+  margin: 12px;
+}
+
+/* 左侧用户 */
+.sidebar {
+  width: 34%;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 14px;
+}
+.sidebar .name {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.sidebar .email {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+.btn {
+  background: #f3982d;
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 13px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+
+/* 右侧内容 */
+.content {
+  width: 66%;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* 分块标题 */
+.section-title {
+  background: #f7f7f7;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-left: 4px solid #b11c1c;
+}
+
+/* 行 */
+.row {
+  display: flex;
+  padding: 10px 12px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+.label {
+  width: 55%;
+  color: #666;
+}
+.value {
+  width: 45%;
+}
+.score {
+  color: #b11c1c;
+  font-weight: 700;
+}
+
+/* 审查通过 */
+.pass {
+  color: #1a8f3c;
+  font-weight: 600;
+}
+
+.notice {
+  font-size: 12px;
+  color: #888;
+  padding: 12px;
+  line-height: 1.5;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  padding: 14px 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div>2026年01月14日 星期三 下午好！</div>
+  <div>您好，孙越 ｜ 退出</div>
+</div>
+
+<div class="banner">
+  <h1>国家公务员局</h1>
+  <h2>中央机关及其直属机构2026年度考试录用公务员专题</h2>
+</div>
+
+<div class="main">
+
+  <!-- 左侧 -->
+  <div class="sidebar">
+    <div class="name">孙越</div>
+    <div class="email">电子邮箱：52752899@qq.com</div>
+    <div class="btn">修改邮箱</div>
+    <div class="btn">修改密码</div>
+  </div>
+
+  <!-- 右侧 -->
+  <div class="content">
+
+    <!-- 职位信息 -->
+    <div class="section-title">报考职位信息</div>
+    <div class="row">
+      <div class="label">招录机关</div>
+      <div class="value">厦门海关(129120)</div>
+    </div>
+    <div class="row">
+      <div class="label">用人司局</div>
+      <div class="value">海沧海关</div>
+    </div>
+    <div class="row">
+      <div class="label">报考职位</div>
+      <div class="value">监管四级主办及以下</div>
+    </div>
+
+    <!-- 成绩 -->
+    <div class="section-title">笔试信息</div>
+    <div class="row">
+      <div class="label">行政职业能力测验</div>
+      <div class="value score">60.5</div>
+    </div>
+    <div class="row">
+      <div class="label">申论</div>
+      <div class="value score">62.0</div>
+    </div>
+    <div class="row">
+      <div class="label">公共科目总成绩</div>
+      <div class="value score">122.5</div>
+    </div>
+
+    <!-- 资格审查 -->
+    <div class="section-title">资格审查信息</div>
+    <div class="row">
+      <div class="label">审核状态</div>
+      <div class="value pass">审核通过</div>
+    </div>
+    <div class="row">
+      <div class="label">审核时间</div>
+      <div class="value">2025-10-18</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="notice">
+  说明：资格审查通过并不代表最终录用结果，具体以公告为准。
+</div>
+
+<div class="footer">
+  版权所有：国家公务员局
+</div>
+
+</body>
+</html>
